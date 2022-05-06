@@ -1,0 +1,23 @@
+from tkinter import *
+top = Tk()
+
+count = 0
+
+def click_me():
+    global count
+    count += 1
+    print(f"{count}I love you!")
+
+photo = PhotoImage(file = "C:\\Users\\DELL\\Desktop\\Untitled.png")
+my_first_button = Button(top,
+                         text = "I have a secret message for you.",
+                         command = click_me(),
+)
+button2 = Button(top,
+                 command = click_me(),
+                 image = photo)
+my_first_button.pack()
+
+button2.pack()
+
+top.mainloop()
