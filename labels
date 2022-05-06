@@ -1,0 +1,24 @@
+from tkinter import *
+top = Tk()
+top.title("Hello,Hello")
+top.geometry("420x420")
+
+my_first_label = Label (top, text="PYTHON PROGRAMMING")
+
+# my_first_label.place(x=100,y=100)
+my_first_label.pack()
+photo = PhotoImage(file = "C:\\Users\\DELL\\Desktop\\Untitled.png")#you have to put // for escape sequence. also convert it in a PhotoImage first
+label2 = Label(top,
+               text = "GUI PRACTICE",
+               font = ('Arial',40,'bold'), #font type,font size, font variation
+               fg = '#00FF00', #add unique hex code dont forget hash symbol
+               bg = 'black',#or simply enter colour name
+               relief = RAISED,#border style. another option is SUNKEN.
+               bd = 10, #border width
+               padx = 20, #gap between border and the string of text
+               pady = 20,
+               image = photo,
+               compound = 'bottom' #this for placement of the image wrt to the label
+               )
+label2.pack()
+top.mainloop()
