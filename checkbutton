@@ -1,0 +1,19 @@
+from tkinter import *
+def display():
+    if(x.get()==1):
+        print("You have completed GUI practice.")
+    else:
+        print("You have to complete GUI practice")
+
+top = Tk()
+x = IntVar() #has to be defined inside window.
+## A variable defined using IntVar() function holds integer data where we can set integer data and can retrieve it as well using getter and setter methods.
+
+my_first_check = Checkbutton(top,
+                             text="Gui Practice",
+                             variable = x,
+                             onvalue=1,
+                             offvalue=0,
+                             command = display)
+my_first_check.pack()
+top.mainloop()
