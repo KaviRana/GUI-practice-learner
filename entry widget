@@ -1,0 +1,28 @@
+from tkinter import *
+def submit():
+    username = my_first_entry.get() #get() takes the value entered. its like input
+    print(f"Hello {username}")
+def delete():
+    my_first_entry.delete(0,END)
+    #this delete fuction will delete from 0(starting point) and END (endiing point)
+
+def back():
+    length = len(my_first_entry.get())
+    my_first_entry.delete(length-1,END)
+
+top = Tk()
+
+my_first_entry = Entry(top,
+                       font = ('Arial',50,'bold'),)
+my_first_entry.pack(side=LEFT)
+submit = Button(top,text="submit",command=submit)
+submit.pack(side=RIGHT)
+delete = Button(top,text="Delete",command=delete)
+backspace = Button(top,text="Backspace",command=back)
+delete.pack(side=RIGHT)
+backspace.pack(side=RIGHT)
+top.mainloop()
+some other additonal function is 
+#entry.insert(0,'Spongebob') this one is defualt text that will be displayed inside the entry box
+#entry.config(show="*") this will display the "*" insread of any text entered by user. but on using entry.get() it will be the actual string
+#entry.config(state=DISABLED) if you dont the entry box to be used. 
